@@ -1,0 +1,7 @@
+.IFJcode23
+
+
+
+DEFVAR GF@x
+MOVE GF@x INT@5
+   

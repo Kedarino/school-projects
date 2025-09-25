@@ -1,0 +1,269 @@
+STMT_NODE:
+|--FUNC_NODE:
+|  |--PARAMETR_NODE:
+|  |  |--PAR_NAME_NODE: '_'
+|  |  |  |--PAR_IDENT_NODE: 'n'
+|  |  |  |  |--TYPE_NODE: INT
+|  |--STMT_NODE:
+|  |  |--DEF_NODE:
+|  |  |  |--VAR_NODE:
+|  |  |  |  |--TYPE_NODE: INT?
+|  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |--IDENT_NODE: result
+|  |--STMT_NODE:
+|  |  |--IF_NODE:
+|  |  |  |--GREATER_THAN_NODE:
+|  |  |  |  |--EXPR_NODE:
+|  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |--IDENT_NODE: n
+|  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |  |  |--EXPR_NODE:
+|  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |--INT_NODE: 2
+|  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |  |--IF_SCOPE_NODE:
+|  |  |  |  |--STMT_NODE:
+|  |  |  |  |  |--ASSIGN_NODE:
+|  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |--IDENT_NODE: result
+|  |  |  |  |  |  |  |  |--TYPE_NODE: INT?
+|  |  |  |  |  |  |--EXPR_NODE:
+|  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |--INT_NODE: 1
+|  |  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |  |  |--STMT_NODE:
+|  |  |  |  |  |--DEF_NODE:
+|  |  |  |  |  |  |--LET_NODE:
+|  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |  |--IDENT_NODE: decremented_n
+|  |  |  |  |  |  |--EXPR_NODE:
+|  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |--FUNC_CALL_NODE: 'decrement'
+|  |  |  |  |  |  |  |  |  |--PARAMETR_NODE:
+|  |  |  |  |  |  |  |  |  |  |--PAR_NAME_NODE: 'of'
+|  |  |  |  |  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |  |  |  |  |--IDENT_NODE: n
+|  |  |  |  |  |  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |  |  |  |  |  |  |  |--PARAMETR_NODE:
+|  |  |  |  |  |  |  |  |  |  |--PAR_NAME_NODE: 'by'
+|  |  |  |  |  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |  |  |  |  |--INT_NODE: 1
+|  |  |  |  |  |  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |  |  |--STMT_NODE:
+|  |  |  |  |  |--DEF_NODE:
+|  |  |  |  |  |  |--LET_NODE:
+|  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |  |--IDENT_NODE: temp_result
+|  |  |  |  |  |  |--EXPR_NODE:
+|  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |--FUNC_CALL_NODE: 'factorial'
+|  |  |  |  |  |  |  |  |  |--PARAMETR_NODE:
+|  |  |  |  |  |  |  |  |  |  |--PAR_NAME_NODE: '_'
+|  |  |  |  |  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |  |  |  |  |--IDENT_NODE: decremented_n
+|  |  |  |  |  |  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |  |  |--STMT_NODE:
+|  |  |  |  |  |--ASSIGN_NODE:
+|  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |--IDENT_NODE: result
+|  |  |  |  |  |  |  |  |--TYPE_NODE: INT?
+|  |  |  |  |  |  |--EXPR_NODE:
+|  |  |  |  |  |  |  |--MULTI_NODE:
+|  |  |  |  |  |  |  |  |--EXPR_NODE:
+|  |  |  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |  |  |--IDENT_NODE: n
+|  |  |  |  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |  |  |  |  |  |  |--EXPR_NODE:
+|  |  |  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |  |  |--IDENT_NODE: temp_result
+|  |  |  |  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |--STMT_NODE:
+|  |  |--RETURN_NODE:
+|  |  |  |--EXPR_NODE:
+|  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |--EXCL_MARK_NODE:
+|  |  |  |  |  |  |--IDENT_NODE: result
+|  |  |  |  |  |  |  |--TYPE_NODE: INT?
+STMT_NODE:
+|--FUNC_NODE:
+|  |--PARAMETR_NODE:
+|  |  |--PAR_NAME_NODE: 'of'
+|  |  |  |--PAR_IDENT_NODE: 'n'
+|  |  |  |  |--TYPE_NODE: INT
+|  |--PARAMETR_NODE:
+|  |  |--PAR_NAME_NODE: 'by'
+|  |  |  |--PAR_IDENT_NODE: 'm'
+|  |  |  |  |--TYPE_NODE: INT
+|  |--STMT_NODE:
+|  |  |--RETURN_NODE:
+|  |  |  |--EXPR_NODE:
+|  |  |  |  |--SUB_NODE:
+|  |  |  |  |  |--EXPR_NODE:
+|  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |--IDENT_NODE: n
+|  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |  |  |  |--EXPR_NODE:
+|  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |--IDENT_NODE: m
+|  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+STMT_NODE:
+STMT_NODE:
+|--FUNC_CALL_NODE: 'write'
+|  |--PARAMETR_NODE:
+|  |  |--PAR_NAME_NODE: '_'
+|  |  |  |--TERM_NODE:
+|  |  |  |  |--STRING_NODE: 'Zadejte cislo pro vypocet faktorialu: '
+|  |  |  |  |  |--TYPE_NODE: STRING
+STMT_NODE:
+|--DEF_NODE:
+|  |--LET_NODE:
+|  |  |--TYPE_NODE: INT?
+|  |  |  |--TERM_NODE:
+|  |  |  |  |--IDENT_NODE: inp
+|  |--EXPR_NODE:
+|  |  |--TERM_NODE:
+|  |  |  |--FUNC_CALL_NODE: 'readInt'
+STMT_NODE:
+|--IF_NODE:
+|  |--IF_LET_NODE:
+|  |  |--TERM_NODE:
+|  |  |  |--IDENT_NODE: inp
+|  |  |  |  |--TYPE_NODE: INT?
+|  |--IF_SCOPE_NODE:
+|  |  |--STMT_NODE:
+|  |  |  |--IF_NODE:
+|  |  |  |  |--GREATER_THAN_NODE:
+|  |  |  |  |  |--EXPR_NODE:
+|  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |--IDENT_NODE: inp
+|  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |  |  |  |--EXPR_NODE:
+|  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |--INT_NODE: 0
+|  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |  |  |--IF_SCOPE_NODE:
+|  |  |  |  |  |--STMT_NODE:
+|  |  |  |  |  |  |--FUNC_CALL_NODE: 'write'
+|  |  |  |  |  |  |  |--PARAMETR_NODE:
+|  |  |  |  |  |  |  |  |--PAR_NAME_NODE: '_'
+|  |  |  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |  |  |--STRING_NODE: 'Faktorial nelze spocitat!'
+|  |  |  |  |  |  |  |  |  |  |  |--TYPE_NODE: STRING
+|  |  |  |  |  |--STMT_NODE:
+|  |  |  |  |  |  |--DEF_NODE:
+|  |  |  |  |  |  |  |--LET_NODE:
+|  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |  |  |--IDENT_NODE: vysl
+|  |  |  |  |  |  |  |--EXPR_NODE:
+|  |  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |  |--FUNC_CALL_NODE: 'factorial'
+|  |  |  |  |  |  |  |  |  |  |--PARAMETR_NODE:
+|  |  |  |  |  |  |  |  |  |  |  |--PAR_NAME_NODE: '_'
+|  |  |  |  |  |  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |  |  |  |  |  |--IDENT_NODE: inp
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |  |  |  |--STMT_NODE:
+|  |  |  |  |  |  |--FUNC_CALL_NODE: 'write'
+|  |  |  |  |  |  |  |--PARAMETR_NODE:
+|  |  |  |  |  |  |  |  |--PAR_NAME_NODE: '_'
+|  |  |  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |  |  |--STRING_NODE: 'Vysledek je: '
+|  |  |  |  |  |  |  |  |  |  |  |--TYPE_NODE: STRING
+|  |  |  |  |  |  |  |--PARAMETR_NODE:
+|  |  |  |  |  |  |  |  |--PAR_NAME_NODE: '_'
+|  |  |  |  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |  |  |  |--IDENT_NODE: vysl
+|  |  |  |  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+|  |  |--STMT_NODE:
+|  |  |  |--FUNC_CALL_NODE: 'write'
+|  |  |  |  |--PARAMETR_NODE:
+|  |  |  |  |  |--PAR_NAME_NODE: '_'
+|  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |--STRING_NODE: 'Chyba pri nacitani celeho cisla!'
+|  |  |  |  |  |  |  |  |--TYPE_NODE: STRING
+STMT_NODE:
+|--DEF_NODE:
+|  |--VAR_NODE:
+|  |  |--TYPE_NODE: DOUBLE
+|  |  |  |--TERM_NODE:
+|  |  |  |  |--IDENT_NODE: a
+|  |--EXPR_NODE:
+|  |  |--TERM_NODE:
+|  |  |  |--FUNC_CALL_NODE: 'Int2Double'
+|  |  |  |  |--PARAMETR_NODE:
+|  |  |  |  |  |--PAR_NAME_NODE: 'term'
+|  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |--INT_NODE: 10
+|  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+STMT_NODE:
+|--DEF_NODE:
+|  |--VAR_NODE:
+|  |  |--TYPE_NODE: INT
+|  |  |  |--TERM_NODE:
+|  |  |  |  |--IDENT_NODE: b
+|  |--EXPR_NODE:
+|  |  |--TERM_NODE:
+|  |  |  |--FUNC_CALL_NODE: 'Double2Int'
+|  |  |  |  |--PARAMETR_NODE:
+|  |  |  |  |  |--PAR_NAME_NODE: 'term'
+|  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |--DOUBLE_NODE: 10.500000
+|  |  |  |  |  |  |  |  |--TYPE_NODE: DOUBLE
+STMT_NODE:
+|--DEF_NODE:
+|  |--VAR_NODE:
+|  |  |--TYPE_NODE: STRING
+|  |  |  |--TERM_NODE:
+|  |  |  |  |--IDENT_NODE: c
+|  |--EXPR_NODE:
+|  |  |--TERM_NODE:
+|  |  |  |--FUNC_CALL_NODE: 'chr'
+|  |  |  |  |--PARAMETR_NODE:
+|  |  |  |  |  |--PAR_NAME_NODE: '_'
+|  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |--INT_NODE: 61
+|  |  |  |  |  |  |  |  |--TYPE_NODE: INT
+STMT_NODE:
+|--DEF_NODE:
+|  |--VAR_NODE:
+|  |  |--TYPE_NODE: STRING?
+|  |  |  |--TERM_NODE:
+|  |  |  |  |--IDENT_NODE: d
+|  |--EXPR_NODE:
+|  |  |--TERM_NODE:
+|  |  |  |--FUNC_CALL_NODE: 'readString'
+STMT_NODE:
+|--DEF_NODE:
+|  |--VAR_NODE:
+|  |  |--TYPE_NODE: INT?
+|  |  |  |--TERM_NODE:
+|  |  |  |  |--IDENT_NODE: e
+|  |--EXPR_NODE:
+|  |  |--TERM_NODE:
+|  |  |  |--FUNC_CALL_NODE: 'readInt'
+STMT_NODE:
+|--DEF_NODE:
+|  |--VAR_NODE:
+|  |  |--TYPE_NODE: DOUBLE?
+|  |  |  |--TERM_NODE:
+|  |  |  |  |--IDENT_NODE: f
+|  |--EXPR_NODE:
+|  |  |--TERM_NODE:
+|  |  |  |--FUNC_CALL_NODE: 'readDouble'
+STMT_NODE:
+|--DEF_NODE:
+|  |--VAR_NODE:
+|  |  |--TYPE_NODE: INT
+|  |  |  |--TERM_NODE:
+|  |  |  |  |--IDENT_NODE: g
+|  |--EXPR_NODE:
+|  |  |--TERM_NODE:
+|  |  |  |--FUNC_CALL_NODE: 'length'
+|  |  |  |  |--PARAMETR_NODE:
+|  |  |  |  |  |--PAR_NAME_NODE: '_'
+|  |  |  |  |  |  |--TERM_NODE:
+|  |  |  |  |  |  |  |--STRING_NODE: 'karel'
+|  |  |  |  |  |  |  |  |--TYPE_NODE: STRING

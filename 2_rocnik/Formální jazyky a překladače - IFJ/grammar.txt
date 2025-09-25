@@ -1,0 +1,39 @@
+Program → Function_definition, EOL, Program
+Program → Statement, EOL, Program
+Program → EOF
+Function_definition → "func", Identifier, "(", List_of_parameters, ")", "->", Type, EOL, "{", Statement, "}", "end"
+Function_definition → "func", Identifier, "(", List_of_parameters, ")", EOL, "{", Statement, "}", "end"
+List_of_parameters → ε
+List_of_parameters → Parameter
+List_of_parameters → Parameter, ",", Parameter
+Parameter → Parameter_Name, Identifier, ":", Type
+Type → "Double"
+Type → "String"
+Type → "Int"
+Type → "Double?"
+Type → "String?"
+Type → "Int?"
+Statement → "{", Statement, "}", EOL, Statement
+Statement → If_Statement, EOL, Statement
+Statement → While_Statement, EOL, Statement
+Statement → Definition_Statement, EOL, Statement
+Statement → Assignment_Statement, EOL, Statement
+Statement → Return_Statement, EOL, Statement
+Statement → ε
+If_Statement → "if", "(", Expression, ")", EOL, "{", Statement, "}", "else", EOL, "{", Statement, "}", "end"
+While_Statement → "while", "(", Expression, ")", EOL, "{", Statement, "}", "end"
+Definition_Statement → "var", Identifier, ":", Type, "=", Expression
+Definition_Statement → "let", Identifier, ":", Type, "=", Expression
+Definition_Statement → "var", Identifier, ":", Type
+Definition_Statement → "let", Identifier, ":", Type
+Definition_Statement → "var", Identifier, "=", Expression
+Definition_Statement → "let", Identifier, "=", Expression
+Assignment_Statement → Identifier, "=", Expression
+Return_Statement → "return", Expression
+Identifier → Letter, Identifier_Suffix
+Identifier → "_", Identifier_Suffix
+Identifier_Suffix → "_" | Letter | Digit
+Parameter_Name → "_" | Letter, Parameter_Name_Suffix
+Parameter_Name_Suffix → "_" | Letter | Digit
+Letter → "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z"
+Digit → "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"

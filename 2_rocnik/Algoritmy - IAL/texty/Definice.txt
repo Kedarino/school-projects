@@ -1,0 +1,23 @@
+Rekurzivní definice ekvivalence dvou seznamů
+Dva seznamy jsou ekvivalenttní když jsou oba prázdné nebo když se rovnají jejich první prvky a take jejich zbytky.
+
+Rekurzivní definice délky seznamu
+Je-li seznam prázdný, má délku nula. V jiném případě je jeho délka 1 plus délka zbytku seznamu.
+
+Rekurzivní definice binárního stromu
+Binární strom je buď prázdný, nebo se stavá z jednoho uzlu zvanéhoo kořen advou binárních podstromů - levého a pravého (Oba podstromy mají vlastnosti stromu.)
+Binární strom je váhově vyvážený, když pro všechny jeho uzly platí, že počty uzlů jejich levého podstromu a pravého podstromu se rovnají, nebo se ličí právě o 1.
+Binární strom je výškově vyvážený, když pro jeho všechny uzly platí, že výška levého podstromu se rovná výšce pravého podstromu, nebo se liší právě o 1.
+
+Delete lze také implementovat zaslepením: Klíč rušené položky se přepíše hodnotou, která se nikdy nebude vyhledávat. Tím se ale snižuje aktivní kapacita tabulky!
+
+Vyhledávání  v binárním stromu
+Je-li vyhledávaný klíč roven kořeni, vyhledávání končí úspěšným vyhledáním. Je-li klíč menší, pokračuje vyhledávaní v levém podstromu, je-li větší, pokračuje v pravém podstromu. Vyhledávání končí neůspěšně, pokud je prohledávaný strom prázdný.
+
+Binární vyhledávací strom se zpětnými ukazateli
+1. ZPětný ukazatel kořene ukazuje na NULL (všechny uzly vedlejší diagonály ukazují na NULL)
+2. Zpětný ukazatel levého syna ukazuje na svého otce
+3. Zpětný ukazatel pravého syna dědí ukazatele od otce (ukazuje tam kam otec)
+
+Binární vyhledávání 
+HLavní předností binárního vyhledávání oproti sekvenčnímu je jeho složitost která je v nejhorším případě log 2 n.

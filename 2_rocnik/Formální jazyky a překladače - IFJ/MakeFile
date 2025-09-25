@@ -1,0 +1,18 @@
+CC=gcc
+CFLAGS=-I. -Wall
+DEPS = symtab.h infStr.h
+OBJ = symtab.o infStr.o test_symtab.o
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+test_symtab: $(OBJ)
+	$(CC) -o $@ $^ $(CFLAGS)
+
+.PHONY: clean
+
+clean:
+	rm -f *.o test_symtab
+
+run: test_symtab
+	./test_symtab
