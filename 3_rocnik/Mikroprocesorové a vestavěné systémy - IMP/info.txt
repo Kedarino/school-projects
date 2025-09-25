@@ -1,0 +1,25 @@
+Video prezentace:
+https://drive.google.com/file/d/1G2keG38n2vFtel4ZTzkcWHET-trKllT6/view?usp=sharing
+
+Vrácení zařízení:
+Pří účasti na zkoušce
+
+Postup pro zprovoznění:
+1.Instalace Arduino IDE
+	Nejprve je nutné stáhnout a nainstalovat Arduino IDE z oficiálních stránek: arduino.cc.
+
+2.Přidání podpory desky ESP32
+	•Otevřete v Arduino IDE nabídku Soubor > Nastavení.
+	•Do pole Additional Board Manager URLs vložte následující odkaz: https://dl.espressif.com/dl/package_esp32_index.json 
+	•V nabídce Nástroje > Vývojová deska > Správce desek vyhledejte esp32 by Espressif Systems a nainstalujte jej.
+
+3.Otevření projektu
+	•Otevřete Arduino IDE.
+	•Načtěte hlavní .ino soubor projektu.
+	•Do stejné složky, kde se nachází .ino soubor, vložte také soubor sounds.h, který obsahuje definice zvukových dat.
+
+4.Instalace potřebných knihoven
+	•Přejděte do nabídky Nástroje > Správce knihoven.
+	•Nainstalujte knihovny:
+	•Adafruit SSD1306 (pro OLED displej),
+	•Adafruit GFX (pro grafiku na displeji).
